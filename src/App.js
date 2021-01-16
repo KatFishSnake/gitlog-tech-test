@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import "./App.css";
+import LocalBranches from "./components/LocalBranches";
+import RemoteBranches from "./components/RemoteBranches";
+import Filter from "./components/Filter";
+import List from "./components/List";
+
+import { mockOrg } from "./mockData";
 
 function App() {
+  const [query, setQuery] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="flex w-full h-screen">
+      <aside className="flex-none w-64 bg-gray-300 h-screen bg-gray shadow-md hidden md:block border-r border-gray-400 z-1 px-6 py-4">
+        <h3 className="mb-8 font-black">{mockOrg}</h3>
+
+        <LocalBranches />
+        <RemoteBranches />
+      </aside>
+
+      <section className="flex flex-col w-full h-screen flex-1 overflow-hidden">
+        <Filter
+          onQuery={(val) => {
+            setQuery(val);
+          }}
+        />
+
+        <List query={query} />
+      </section>
+    </main>
   );
 }
 

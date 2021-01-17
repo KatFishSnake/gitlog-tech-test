@@ -12,7 +12,7 @@ function App() {
   const [query, setQuery] = useState("");
   return (
     <main className="flex w-full h-screen">
-      <aside className="flex-none w-64 bg-gray-300 h-screen bg-gray shadow-md hidden md:block border-r border-gray-400 z-1 px-6 py-4">
+      <aside className="flex-none w-64 bg-m-gray h-screen bg-gray shadow-md hidden md:block border-r border-gray-400 px-6 py-4 overflow-auto">
         <h3 className="mb-8 font-black">{mockOrg}</h3>
 
         <LocalBranches />

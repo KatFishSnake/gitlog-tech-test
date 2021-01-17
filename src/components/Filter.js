@@ -1,5 +1,16 @@
 import { useState } from "react";
+import styled from "styled-components";
 // import { debounce } from "lodash";
+
+const SearchField = styled.input`
+  width: 100%;
+  max-width: 300px;
+`;
+
+const SearchTriggerButton = styled.button`
+  background: linear-gradient(180deg, #faf2f2 0%, #ede5e5 100%);
+  border: 1px solid #d0cccc;
+`;
 
 const Filter = ({ onQuery }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,30 +25,34 @@ const Filter = ({ onQuery }) => {
   //   [onQuery]
   // );
 
-  // const handleSearch = (event) => {
-  //   event.persist();
-  //   setSearchQuery(event.target.value);
-  //   onSearchDebounced(event);
-  // };
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+    // On clear bypass the confirm flow
+    if (event.target.value.length === 0) onQuery("");
+  };
 
-  const handleSearch = () => {
+  const handleFilterConfirm = () => {
     onQuery(searchQuery);
   };
 
   return (
-    <div className="w-full h-16 p-4 text-md bg-grey-200 z-1 shadow-md z-1">
-      <input
+    <div className="w-full h-16 px-4 text-md bg-l-gray flex items-center flex-none">
+      <SearchField
         type="search"
         name="commitquery"
-        className="py-1 text-sm focus:outline-none border border-grey-300"
+        className="py-1 text-xs focus:outline-none border border-gray-300 pl-3 pr-1 mr-2 h-7 align-top"
         autoComplete="off"
         placeholder="Filter by commit message…"
-        value={searchQuery}
         onChange={(e) => {
-          setSearchQuery(e.target.value);
+          handleSearch(e);
         }}
       />
-      <button onClick={handleSearch}>Filter</button>
+      <SearchTriggerButton
+        onClick={handleFilterConfirm}
+        className="px-6 text-xs py-1 h-7 align-top"
+      >
+        Filter
+      </SearchTriggerButton>
     </div>
   );
 };

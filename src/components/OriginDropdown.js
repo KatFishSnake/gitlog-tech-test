@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 
-const ArrowSvg = ({ className, fill = "#BEC1C3", rotation = "-45" }) => (
+const ArrowSvg = ({ className, fill = "#BEC1C3" }) => (
   <svg
     className={className}
-    width="6"
-    height="11"
+    width="12"
+    height="12"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path
-      fill={fill}
-      stroke="none"
-      d="M5.618 5.556L.995 10.24.75.75l4.868 4.806z"
-      // transform={`rotate(${rotation})`}
-      fillOpacity="null"
-      strokeOpacity="null"
-      strokeWidth="1.5"
-    />
+    <g>
+      <path
+        stroke="null"
+        d="M9.092 6.207l-5.457 5.457V.75l5.457 5.457z"
+        fillOpacity="null"
+        strokeOpacity="null"
+        strokeWidth="1.5"
+        fill={fill}
+      />
+    </g>
   </svg>
 );
 
@@ -29,7 +30,13 @@ const OriginDropdown = ({ label, children, defaultActive = true }) => {
           setActive(!isActive);
         }}
       >
-        <ArrowSvg className="inline mr-2" /> {label}
+        <ArrowSvg
+          className={clsx(
+            isActive && "rotate-90",
+            "inline mr-1 transform transition-transform"
+          )}
+        />{" "}
+        {label}
       </span>
       <div className={clsx("pt-1 pl-4 block", isActive ? "block" : "hidden")}>
         {children}

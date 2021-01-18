@@ -12,12 +12,14 @@
 - Craco
 - gitgraph
 - git2json
-- Testing Library
+- testing-library
+- twin.macro
 
 ## Complications:
 
 - Logic for coloring branches and tags
 - Not many alternatives for git graph visualization (will recreate in d3 probs)
+- Necessity to finish in 3 days
 
 ## Questions:
 
@@ -36,6 +38,7 @@
 - Will recommend a UX of debounced filter, remove Filter button, add debounced on change directly on the input field ("When a user types text into the filter input, it should immediately show the filtered results" is confusing as it clashes with existing button)
 - Will prompt for a styleguide, if there would be future development on this ideally this app would be build with a theme in mind
 - Not a big fan of NavItem onClick, but didn't want it to be broken down component wise any otherway
+- Regarding a question about noting down what i did for the build pipeline, I did the eject and fixed all outstanding issues with latest create-react-app ejects additionally modified Babel config to suit my tailwind and style-components needs
 
 **Mobile report is not ideal**
 

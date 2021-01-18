@@ -1,7 +1,6 @@
 import { useState, lazy, Suspense } from "react";
 
-import Loader from "./components/Loader";
-
+import { CenteredLoader } from "./components/Loader";
 import { mockOrg } from "./config";
 
 const List = lazy(() => import("./containers/List"));
@@ -13,7 +12,7 @@ function App() {
   const [query, setQuery] = useState("");
   return (
     <main className="flex w-full h-screen">
-      <Suspense fallback={<Loader className="mt-3 text-center w-full" />}>
+      <Suspense fallback={<CenteredLoader />}>
         <aside className="flex-none w-64 bg-m-gray h-screen bg-gray shadow-md hidden md:block border-r border-gray-400 px-6 py-4 overflow-auto">
           <h3 className="mb-8 font-black">{mockOrg}</h3>
 

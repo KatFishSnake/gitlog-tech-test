@@ -1,12 +1,14 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import tw from "twin.macro";
 
 import { sizes } from "../style-vars";
 
 const SearchField = styled.input`
   width: 100%;
-
+  ${tw`py-1 text-xs focus:outline-none border border-gray-300 pl-3 pr-1 mr-2 h-7 align-top`}
+  
   @media ${sizes.md} {
     max-width: 300px;
   }
@@ -15,6 +17,7 @@ const SearchField = styled.input`
 const SearchTriggerButton = styled.button`
   background: linear-gradient(180deg, #faf2f2 0%, #ede5e5 100%);
   border: 1px solid #d0cccc;
+  ${tw`px-6 text-xs py-1 h-7 align-top`}
 `;
 
 const Filter = ({ onQuery }) => {
@@ -45,7 +48,6 @@ const Filter = ({ onQuery }) => {
       <SearchField
         type="search"
         name="commitquery"
-        className="py-1 text-xs focus:outline-none border border-gray-300 pl-3 pr-1 mr-2 h-7 align-top"
         autoComplete="off"
         placeholder="Filter by commit message…"
         value={searchQuery}
@@ -53,10 +55,7 @@ const Filter = ({ onQuery }) => {
           handleSearch(e);
         }}
       />
-      <SearchTriggerButton
-        onClick={handleFilterConfirm}
-        className="px-6 text-xs py-1 h-7 align-top"
-      >
+      <SearchTriggerButton onClick={handleFilterConfirm}>
         Filter
       </SearchTriggerButton>
     </div>

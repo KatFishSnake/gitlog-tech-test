@@ -13,9 +13,7 @@ const RemoteBranches = () => {
 
   return (
     <div className="flex flex-col">
-      <StyledNavHeader className="mb-4 text-xxs not-italic font-bold leading-3 tracking-normal text-left">
-        REMOTE BRANCHES
-      </StyledNavHeader>
+      <StyledNavHeader>REMOTE BRANCHES</StyledNavHeader>
       <div className="text-xs mb-4">
         {loading ? (
           <Loader />

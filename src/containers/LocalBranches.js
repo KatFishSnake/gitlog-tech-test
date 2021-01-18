@@ -12,9 +12,7 @@ const LocalBranches = () => {
 
   return (
     <div className="flex flex-col mb-4">
-      <StyledNavHeader className="mb-4 text-xxs not-italic font-bold leading-3 tracking-normal text-left">
-        LOCAL BRANCHES
-      </StyledNavHeader>
+      <StyledNavHeader>LOCAL BRANCHES</StyledNavHeader>
       <div className="text-xs">
         {loading ? (
           <Loader />

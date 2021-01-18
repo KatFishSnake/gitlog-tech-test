@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Filter consistently 1`] = `
+<div>
+  <div
+    class="w-full h-16 px-4 text-md bg-l-gray flex items-center flex-none"
+  >
+    <input
+      autocomplete="off"
+      class="sc-bdfBwQ hluRTZ py-1 text-xs focus:outline-none border border-gray-300 pl-3 pr-1 mr-2 h-7 align-top"
+      name="commitquery"
+      placeholder="Filter by commit message…"
+      type="search"
+      value=""
+    />
+    <button
+      class="sc-gsTCUz kAPWUU px-6 text-xs py-1 h-7 align-top"
+    >
+      Filter
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders List consistently 1`] = `
+<div>
+  <div
+    class="flex text-xxs flex-wrap overflow-y-scroll overflow-x-hidden"
+  >
+    <div
+      class="sc-dlfnbm eZAuYd sticky top-0 grid grid-cols-4 w-full items-start"
+    >
+      <div
+        class="sc-eCssSg eVfvmO w-full sticky top-0 px-2 py-1 bg-d-gray flex-0 text-center shadow-inner"
+      >
+        Graph
+      </div>
+      <div
+        class="sc-eCssSg eVfvmO px-2 py-1 bg-d-gray border-l shadow-inner"
+      >
+        Description
+      </div>
+      <div
+        class="sc-eCssSg eVfvmO hidden md:block px-2 py-1 bg-d-gray border-l shadow-inner"
+      >
+        Commit #
+      </div>
+      <div
+        class="sc-eCssSg eVfvmO hidden md:block px-2 py-1 bg-d-gray border-l shadow-inner"
+      >
+        Author
+      </div>
+      <div
+        class="sc-eCssSg eVfvmO hidden md:block px-2 py-1 bg-d-gray border-l shadow-inner"
+      >
+        Date
+      </div>
+    </div>
+    <span
+      class="mt-3 text-center w-full"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;

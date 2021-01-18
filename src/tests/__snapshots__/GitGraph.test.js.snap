@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders GitGraph consistently 1`] = `
+<div>
+  <div
+    class="sc-bdfBwQ iGPnYJ"
+  >
+    <svg>
+      <g
+        transform="translate(10, 10)"
+      >
+        <g />
+      </g>
+    </svg>
+  </div>
+</div>
+`;

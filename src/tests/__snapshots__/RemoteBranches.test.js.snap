@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders RemoteBranches consistently 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <h4
+      class="sc-bdfBwQ iHCwhp mb-4 text-xxs not-italic font-bold leading-3 tracking-normal text-left"
+    >
+      REMOTE BRANCHES
+    </h4>
+    <div
+      class="text-xs mb-4"
+    >
+      <span>
+        Loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;

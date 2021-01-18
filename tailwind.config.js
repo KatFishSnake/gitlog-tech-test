@@ -19,6 +19,7 @@ module.exports = {
         "d-gray": "#D8D8D8",
         "l-gray": "rgba(239, 242, 244, 0.498279)",
         "m-gray": "#E9EBEE",
+        "highlight-blue": "#5DAAE9",
       },
       fontSize: {
         xxs: "0.6875rem",
@@ -26,6 +27,7 @@ module.exports = {
       },
     },
     fontFamily: {
+      sans: ["Roboto", "Helvetica", "sans-serif"],
       display: ["Roboto", "Helvetica", "sans-serif"],
       body: ["Roboto", "Helvetica", "sans-serif"],
     },

@@ -1,10 +1,15 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
-// import { debounce } from "lodash";
+
+import { sizes } from "../style-vars";
 
 const SearchField = styled.input`
   width: 100%;
-  max-width: 300px;
+
+  @media ${sizes.md} {
+    max-width: 300px;
+  }
 `;
 
 const SearchTriggerButton = styled.button`
@@ -43,6 +48,7 @@ const Filter = ({ onQuery }) => {
         className="py-1 text-xs focus:outline-none border border-gray-300 pl-3 pr-1 mr-2 h-7 align-top"
         autoComplete="off"
         placeholder="Filter by commit message…"
+        value={searchQuery}
         onChange={(e) => {
           handleSearch(e);
         }}
@@ -55,6 +61,10 @@ const Filter = ({ onQuery }) => {
       </SearchTriggerButton>
     </div>
   );
+};
+
+Filter.propTypes = {
+  onQuery: PropTypes.func,
 };
 
 export default Filter;

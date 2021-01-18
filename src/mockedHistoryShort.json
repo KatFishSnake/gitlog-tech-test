@@ -1,0 +1,289 @@
+[
+  {
+    "refs": ["HEAD", "main"],
+    "hash": "bf21c032b699f40c9b81922d9ab211e14fba77ad",
+    "hashAbbrev": "bf21c03",
+    "tree": "5e8e185018319f9978e7a364b34129a56fa0e16d",
+    "treeAbbrev": "5e8e185",
+    "parents": ["3af6dad1736bcd2ef011d4a82cda6a2893e5ab12"],
+    "parentsAbbrev": ["3af6dad"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862556000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862556000
+    },
+    "subject": "Risky change",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 1,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": ["origin/main", "origin/HEAD"],
+    "hash": "3af6dad1736bcd2ef011d4a82cda6a2893e5ab12",
+    "hashAbbrev": "3af6dad",
+    "tree": "91862fca67d3e21b7b32d0254435a428ce76c922",
+    "treeAbbrev": "91862fc",
+    "parents": ["d8d0eb6ac962c93c4ee3153be9812606509cb57b"],
+    "parentsAbbrev": ["d8d0eb6"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862468000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862468000
+    },
+    "subject": "WIP new feature",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 2,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [],
+    "hash": "d8d0eb6ac962c93c4ee3153be9812606509cb57b",
+    "hashAbbrev": "d8d0eb6",
+    "tree": "147e3c89ca65cdc0eed354590cc50e42afc76cd8",
+    "treeAbbrev": "147e3c8",
+    "parents": [
+      "33d025d329863a1b704ee3a2ef4759da0f29bea2",
+      "4d24997cc250384ccff1bf0466782b37ef586f27"
+    ],
+    "parentsAbbrev": ["33d025d", "4d24997"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862334000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862334000
+    },
+    "subject": "Merged some-interesting-change-to-implement in",
+    "body": "",
+    "notes": "",
+    "stats": []
+  },
+  {
+    "refs": [],
+    "hash": "33d025d329863a1b704ee3a2ef4759da0f29bea2",
+    "hashAbbrev": "33d025d",
+    "tree": "b21fcc1d4f7ef6670d6a5d9933b0ae5b5e662967",
+    "treeAbbrev": "b21fcc1",
+    "parents": ["b6b61de155ef880d26b4f6ee17785cd4a9202763"],
+    "parentsAbbrev": ["b6b61de"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862303000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862303000
+    },
+    "subject": "Fixed something big",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 1,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [
+      "origin/some-interesting-change-to-implement",
+      "some-interesting-change-to-implement"
+    ],
+    "hash": "4d24997cc250384ccff1bf0466782b37ef586f27",
+    "hashAbbrev": "4d24997",
+    "tree": "6389c2234fd65073a86a024b1362070f72468c76",
+    "treeAbbrev": "6389c22",
+    "parents": ["be5226f6e08b787afc442bd8469654e668dfe1be"],
+    "parentsAbbrev": ["be5226f"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862269000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862269000
+    },
+    "subject": "Added feature Y",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 2,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [],
+    "hash": "b6b61de155ef880d26b4f6ee17785cd4a9202763",
+    "hashAbbrev": "b6b61de",
+    "tree": "04c8a8190a35f22f9a9de70c606150049b368bd2",
+    "treeAbbrev": "04c8a81",
+    "parents": [
+      "fb8a6ccf72b2fb570a3110d714a6c08ce291e69a",
+      "17b48b403d7737ac89fee8dce7aa757d32308bc5"
+    ],
+    "parentsAbbrev": ["fb8a6cc", "17b48b4"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862222000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862222000
+    },
+    "subject": "Merged HEAD in",
+    "body": "",
+    "notes": "",
+    "stats": []
+  },
+  {
+    "refs": [],
+    "hash": "fb8a6ccf72b2fb570a3110d714a6c08ce291e69a",
+    "hashAbbrev": "fb8a6cc",
+    "tree": "04c8a8190a35f22f9a9de70c606150049b368bd2",
+    "treeAbbrev": "04c8a81",
+    "parents": ["ea23fecca4284b53dca9467fb8f69c105a34b254"],
+    "parentsAbbrev": ["ea23fec"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862163000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610862163000
+    },
+    "subject": "Added feature X",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 2,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [],
+    "hash": "be5226f6e08b787afc442bd8469654e668dfe1be",
+    "hashAbbrev": "be5226f",
+    "tree": "5e99cb188f6637ae4d952138ee66fa27a54ff608",
+    "treeAbbrev": "5e99cb1",
+    "parents": ["ea23fecca4284b53dca9467fb8f69c105a34b254"],
+    "parentsAbbrev": ["ea23fec"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre@intergalactic.com",
+      "timestamp": 1610744758000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre@intergalactic.com",
+      "timestamp": 1610744758000
+    },
+    "subject": "Implemented my second change",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 2,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [],
+    "hash": "ea23fecca4284b53dca9467fb8f69c105a34b254",
+    "hashAbbrev": "ea23fec",
+    "tree": "1ec2299870c8f019d219b36d85c1d733aca68974",
+    "treeAbbrev": "1ec2299",
+    "parents": ["e8b9a97fe6a5438cb3f1a51e314457f40aaf088a"],
+    "parentsAbbrev": ["e8b9a97"],
+    "author": {
+      "name": "Andre Kuznetcov",
+      "email": "andre@intergalactic.com",
+      "timestamp": 1610744707000
+    },
+    "committer": {
+      "name": "Andre Kuznetcov",
+      "email": "andre@intergalactic.com",
+      "timestamp": 1610744707000
+    },
+    "subject": "My first change ;)",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 3,
+        "deletions": 1,
+        "file": "README.md"
+      }
+    ]
+  },
+  {
+    "refs": [],
+    "hash": "e8b9a97fe6a5438cb3f1a51e314457f40aaf088a",
+    "hashAbbrev": "e8b9a97",
+    "tree": "5aa6e2d81f1e1b1b6a1d21f3365d91d5c04ca1f1",
+    "treeAbbrev": "5aa6e2d",
+    "parents": [],
+    "parentsAbbrev": [],
+    "author": {
+      "name": "Andre",
+      "email": "andre.kuzac@gmail.com",
+      "timestamp": 1610744649000
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "timestamp": 1610744649000
+    },
+    "subject": "Initial commit",
+    "body": "",
+    "notes": "",
+    "stats": [
+      {
+        "additions": 1,
+        "deletions": 0,
+        "file": "README.md"
+      }
+    ]
+  }
+]

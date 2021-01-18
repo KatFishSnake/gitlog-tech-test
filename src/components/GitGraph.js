@@ -1,19 +1,27 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Gitgraph, templateExtend, TemplateName } from "@gitgraph/react";
 import styled from "styled-components";
 
+import { graphColors } from "../config";
+
 const GraphWrap = styled.div`
-  // A way to remove annoying tooltips (not the best but works for now)
+  // A way to remove annoying tooltips (again can be improved)
   pointer-events: none;
 
+  // A way to remove strange non message labels (again can be improved)
   foreignObject {
     display: none !important;
   }
 `;
 
-const withoutBranchLabels = templateExtend(TemplateName.Metro, {
-  colors: ["#DF9FF7", "#96D0EC", "#EC9696", "#8AE798"],
-  branch: { lineWidth: 2, spacing: 12, label: { display: false } },
+const minimalisticTemplate = templateExtend(TemplateName.Metro, {
+  colors: graphColors,
+  branch: {
+    lineWidth: 2,
+    spacing: 12,
+    label: { display: false },
+  },
   commit: {
     message: { displayAuthor: false, displayHash: false, color: "transparent" },
     spacing: 24,
@@ -34,7 +42,7 @@ const GitGraph = ({ className, graphData }) => {
     <GraphWrap className={className}>
       <Gitgraph
         options={{
-          template: withoutBranchLabels,
+          template: minimalisticTemplate,
         }}
       >
         {(gitgraph) => {
@@ -43,6 +51,11 @@ const GitGraph = ({ className, graphData }) => {
       </Gitgraph>
     </GraphWrap>
   );
+};
+
+GitGraph.propTypes = {
+  className: PropTypes.string,
+  graphData: PropTypes.array,
 };
 
 export default GitGraph;

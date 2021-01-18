@@ -1,28 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 
-const ArrowSvg = ({ className, fill = "#BEC1C3" }) => (
-  <svg
-    className={className}
-    width="12"
-    height="12"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g>
-      <path
-        stroke="null"
-        d="M9.092 6.207l-5.457 5.457V.75l5.457 5.457z"
-        fillOpacity="null"
-        strokeOpacity="null"
-        strokeWidth="1.5"
-        fill={fill}
-      />
-    </g>
-  </svg>
-);
+import ArrowSvg from "./ArrowSvg";
 
-const OriginDropdown = ({ label, children, defaultActive = true }) => {
-  const [isActive, setActive] = useState(defaultActive);
+const OriginDropdown = ({ label, children, initialActive = true }) => {
+  const [isActive, setActive] = useState(initialActive);
   return (
     <>
       <span
@@ -38,11 +21,17 @@ const OriginDropdown = ({ label, children, defaultActive = true }) => {
         />{" "}
         {label}
       </span>
-      <div className={clsx("pt-1 pl-4 block", isActive ? "block" : "hidden")}>
+      <div className={clsx("pt-2 pl-4 block", isActive ? "block" : "hidden")}>
         {children}
       </div>
     </>
   );
+};
+
+OriginDropdown.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.array,
+  initialActive: PropTypes.bool,
 };
 
 export default OriginDropdown;

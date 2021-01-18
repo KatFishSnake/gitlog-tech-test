@@ -1,10 +1,10 @@
+# Developer Notes
+
 ## Technology used:
 
-- react
-- tailwind
-
-npx create-react-tailwind-app
-the less tech i use the better it is
+- [react](https://reactjs.org) cause its sweet 🍰
+- [tailwind](https://tailwindcss.com) cause its fast
+  🏃
 
 ## Learned:
 
@@ -12,47 +12,69 @@ the less tech i use the better it is
 - Craco
 - gitgraph
 - git2json
+- Testing Library
 
-## Remembered:
+## Complications:
 
-- yarn
+- Logic for coloring branches and tags
+- Not many alternatives for git graph visualization (will recreate in d3 probs)
 
-## Complications / Questions:
+## Questions:
 
-- getting good data is not easy
-- table scrolled what ui is suppose to behave like, header specifically
-- default active for origins (first item should be opened ?)
-- what is maximum size of the layout, what will happen on the extra large screens
-- circle icons are different shape under origin, doesn't make sense, replaced it
-- is list paginated? decision should be made if we query on the frontend (depends on pagination and in memory list size)
-- what is the query applied on? makes sense to query / search only visible fields for now
-- colors are hardcoded in gitgraph so need to prompt a designer for more colors (depending on expected number of branches displayed at once)
-- some refs tags have no space on the right side (space added)
+- What might be functionality of the table: header sort?, paginated? number of items at the same time
+- Mobile versoin of the Figma mockups, should I hide Author, Hash and Date fields ? need to confirm
+- Layout specs for xsm-xlg screens, print?
+- Circle icons are different shape under origin than under local, doesn't make sense, so replaced it
+- Should the first origin dropdown be always auto opened? if more than multiple origins in the list?
+- What is the query applied on? makes sense to query / search only visible fields except date
+- More colors for more branches
+- Some branch tags in the description field has no padding from the right side? intentional?
 
 ## Notes:
 
-- Will recommend a UX of debounced filter, remove Filter button, add debounced on change directly on the input field ("When a user types text into the filter input, it should immediately show the
-  filtered results" is confusing)
+- I used create-react-app to quickly bootstrap and get access to a flexiable bundler, plus its quite easy to scale from already setup bundle, just `yarn eject` will get you all configuration you possibly need
+- Will recommend a UX of debounced filter, remove Filter button, add debounced on change directly on the input field ("When a user types text into the filter input, it should immediately show the filtered results" is confusing as it clashes with existing button)
 - Will prompt for a styleguide, if there would be future development on this ideally this app would be build with a theme in mind
-- Compared functionality and UX with gitgraph for vscode and sourcetree
-- Will make better graph library decisions, will make it actually work with commits
+- Not a big fan of NavItem onClick, but didn't want it to be broken down component wise any otherway
 
-## Improvements:
+**Mobile report is not ideal**
 
-- Graph library shows branching in a strange way, will figure out why and address it (comparing to sourcetree)
+- Performance issue can be resolved with the server and more poking at the build
+- Accessibility issue can be resolved with better UI bg colors and labels for the input
 
-## TODO:
+![Mobile report](https://i.imgur.com/WQ113wk.png)
 
-- Commit properly to git every day worked
+**Desktop repot is alright**
 
-- circles are too big
-- Width of the browser md to 800px
-- Roboto !important issue
-- wierd onClick drill into NavBranch component
-- theme integration, primary colors / etc
-- value explicit set on search field
+- Accessibility issue can be resolved with better UI bg colors and labels for the input
 
-# Getting Started with Create React App
+![Desktop report](https://i.imgur.com/yIiXoq0.png)
+
+## Didn't do:
+
+- Proper theming
+- Better color assignment logic (right now breaks if you insert a pull request merge), getting colors per commit will make more sense, need to access graph generation
+- Will make better graph library decisions; graph library shows branching in a strange way, will figure out why and address it (comparing to sourcetree)
+- HEAD and origin/HEAD is not styled the same as siblings
+- Tests throws on not cleaned up, didn't have enough time to investigate why
+- ErrorBoundry for rendering the list fallback state when render fails
+- Will implement a qicker mobile first paint
+
+# Running the project locally
+
+### Pre-requisites:
+
+- `node > v14.3.0`
+- `yarn`
+
+### Setting things up:
+
+- Clone the repository: `git clone <git tag>`
+- Install dependencies: `yarn install`
+- Bootstrap the project: `yarn start`
+- Test the project: `yarn start`
+
+# Getting Started with the App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -82,13 +104,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.

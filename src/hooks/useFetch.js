@@ -17,7 +17,7 @@ const useFetch = (mockData, params, limit = 2000) => {
 
         let data = mockData;
         if (params && params.query) {
-          // Not the place for it, but mimics filtering backend
+          // Might not be the place for it, but mimics filtering backend
           data = filter(mockData, (item) => {
             const keysToSearch = [
               ...item.refs,
